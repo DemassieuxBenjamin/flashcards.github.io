@@ -1,0 +1,40 @@
+.carte{
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    margin: 10% auto;
+}
+
+.carte-interieure{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.carte:hover .carte-interieure{
+    transform: rotateY(180deg);
+}
+
+.carte-recto, .carte-verso{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:20px;
+}
+
+.carte-recto{
+    background-color: brown;
+}
+
+.carte-verso{
+    background-color: blue;
+    color: #fff;
+    transform: rotateY(180deg);
+}
